@@ -11,7 +11,7 @@ bot.on('ready', function () {
 
 bot.on('guildMemberAdd', member => {
     member.createDM().then(channel => {
-        return channel.send('Bienvenue sur le serveur de Alexpgm' + member.displayName)
+        return channel.send('Bienvenue sur le serveur de Zafox' + member.displayName)
         console.log(`${member.displayName} à rejoind le serveur.`)
     }).catch(console.error)
 });
@@ -33,12 +33,12 @@ bot.on('message', msg => {
     if (msg.content.match(/salut/i)) {
             msg.reply('Je suis d\'accord avec toi.')
     }
-    if (msg.content === prefix + "site"){
-        msg.channel.send("https://alexpgm.000webhostapp.com/")
+    if (msg.content === prefix + "youtube"){
+        msg.channel.send("https://www.youtube.com/channel/UCANLTokxHW_FFl20p8JYPfw")
         console.log("Une personne a demandé pour aller sur ton site.")
     }
 
 });
 
-bot.login(cfg.token); //a garder en version desktop
-bot.login(token); //a garder en version heroku
+bot.login(cfg.token);
+bot.login(token);
